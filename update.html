@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://cdn.wallpapersafari.com/5/62/CSHn1b.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>UPDATE DATA</h2>
+        <form action="http://localhost:9000/update" method="POST">
+            <input type="number" name="rollno" placeholder="Enter Roll No of student whose details need to be updated" required>
+            <input type="text" name="fname" placeholder="First Name" required>
+            <input type="text" name="lname" placeholder="Last Name" required>
+            <input type="text" name="mobile" placeholder="Mobile" required>
+            <input type="email" name="email" placeholder="Email ID" required>
+            <input type="text" name="state" placeholder="State" required>
+            <button type="submit">UPDATE</button>
+            <button type="button" onclick="generateReport()">Generate Report</button>
+
+        </form>
+       
+    </div>
+
+    <script>
+        function generateReport() {
+            window.location.href = '/report';
+        }
+    </script>
+</body>
+</html>
